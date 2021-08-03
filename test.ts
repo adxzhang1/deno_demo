@@ -4,7 +4,7 @@ const file = path.join(Deno.cwd(), 'test.js');
 console.log(file);
 
 try {
-  console.log(await import(file));
+  console.log(await import('file://' + file));
 } catch (err) {
   console.log(err);
 }
